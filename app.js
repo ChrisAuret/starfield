@@ -1,4 +1,5 @@
 var stars = [];
+var speed;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -15,6 +16,7 @@ function windowResized() {
 }
 
 function draw() {
+  speed = map(mouseX, 0, windowWidth, 0, 60);
   background(0);
   translate(windowWidth / 2, windowHeight / 2);
 
