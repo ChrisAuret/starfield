@@ -26,6 +26,8 @@ function Star() {
     var sx = map(this.x / this.z, 0, 1, 0, windowWidth);
     var sy = map(this.y / this.z, 0, 1, 0, windowHeight);
 
-    ellipse(sx, sy, 8, 8);
+    var r = map(this.z, 0, windowWidth, 16, 0);
+
+    ellipse(sx, sy, r, r);
   }
 }
