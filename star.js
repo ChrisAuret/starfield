@@ -4,13 +4,19 @@ function Star() {
   this.z = 0;
 
   this.init = function () {
-    this.x = random(0, windowWidth);
-    this.y = random(0, windowHeight);
-    this.z = random(0, windowWidth);
+    this.x = random(-windowWidth, windowWidth);
+    this.y = random(-windowHeight, windowHeight);
+    this.z = random(windowWidth);
   }
 
   this.update = function () {
+    this.z = this.z - 10;
 
+    if (this.z < 1) {
+      this.z = windowWidth;
+      this.x = random(-windowWidth, windowWidth);
+      this.y = random(-windowHeight, windowHeight);
+    }
   }
 
   this.show = function () {
