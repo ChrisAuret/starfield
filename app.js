@@ -2,7 +2,7 @@
 var stars = [];
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
 
   for (var i = 0; i < 100; i++) {
     var star = new Star();
@@ -12,7 +12,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(800, 800);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
